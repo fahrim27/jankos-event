@@ -13,7 +13,7 @@ class TeamController extends Controller
 {   
     public function __construct() {
         $this->middleware(function ($request, $next) {   
-            if(auth()->user()->category_id == null) {
+            if(auth()->user()->hasRole('Teacher') && auth()->user()->category_id == null) {
                 flash('Harap isi data jenis perlombaan tim anda terlebih dahulu')->error();
                 return redirect()->route('setting.index');
             }
@@ -28,8 +28,14 @@ class TeamController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $data = Team::where('team_id', auth()->user()->id)->get();
+    {   
+        if(auth()->user()->hasRole('Admin') || auth()->user()->hasRole('Super Admin')) {
+            $data = Team::all();
+        }
+        else{
+            $data = Team::where('team_id', auth()->user()->id)->get();
+        }
+
         return view('team.index', compact('data'));
     }
 

@@ -28,7 +28,7 @@ class SettingController extends Controller
     {   
         ini_set('upload_max_filesize', '10M');
         ini_set('post_max_size', '10M');
-        
+
         $rules = array(
             'image' => 'mimes:jpeg,png,jpg',
         );
@@ -63,6 +63,14 @@ class SettingController extends Controller
 
     public function updateCategory(Request $request)
     {   
+        if (auth()->user()->category_id != null) {
+            $category = Category::where('id', auth()->user()->category_id)->first();
+            if (Team::where('team_id', auth()->user()->id)->count() == $category->number_of_user) {
+                flash('Team anda telah lengkap. Tidak diperbolehkan mengubah kategori')->warning();
+                return redirect()->route('teams.index');
+            }
+        } 
+
         $rules = array(
             'category_id' => 'required',
         );

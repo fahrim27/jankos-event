@@ -183,6 +183,7 @@ Route::group(['middleware' => ['auth','verified']], function () {
     Route::resource('teams', 'TeamController');
     Route::resource('documents', 'DocumentController');
     Route::resource('logbooks', 'LogbookController');
+    Route::resource('members', 'MemberController');
 
     //Route::get('mitra', 'CompanyController@detail_perusahaan')->name('mitra.list');
 

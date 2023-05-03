@@ -15,6 +15,10 @@ class CreateLogbooksTable extends Migration
     {
         Schema::create('logbooks', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('team_id');
+            $table->string('title');
+            $table->string('image');
+            $table->text('description');
             $table->timestamps();
         });
     }

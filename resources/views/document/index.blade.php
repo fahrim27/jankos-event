@@ -17,7 +17,9 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <button class="btn btn-outline-primary btn-modal" data-href="{{ route('documents.create') }}"><i class='feather icon-plus'></i> Tambah</button>
+                        @if (auth()->user()->hasRole('Teacher'))
+                            <button class="btn btn-outline-primary btn-modal" data-href="{{ route('documents.create') }}"><i class='feather icon-plus'></i> Tambah</button>
+                        @endif
                     </div>
                     <div class="card-content">
                         <div class="card-body card-dashboard">
@@ -39,8 +41,10 @@
                                                 <td>{{ date('d/m/Y', strtotime($value->created_at)) }}</td>
                                                 <td>
                                                     <span class="btn-show badge badge-pill badge-primary" style="cursor: pointer;" data-href="{{ route('documents.show', [$value->id]) }}"><i class="feather icon-eye" title="Edit"> Show</i></span>
-                                                    <span class="btn-edit badge badge-pill badge-primary" style="cursor: pointer;" data-href="{{ route('documents.edit', [$value->id]) }}"><i class="feather icon-edit" title="Edit"> Edit</i></span>
-                                                    <span class="action-delete badge badge-pill badge-danger" style="cursor: pointer;" data-href="{{ route('documents.destroy', [$value->id]) }}"><i class="feather icon-trash" title="Delete"> Delete</i></span>
+                                                    @if (auth()->user()->hasRole('Teacher'))
+                                                        <span class="btn-edit badge badge-pill badge-primary" style="cursor: pointer;" data-href="{{ route('documents.edit', [$value->id]) }}"><i class="feather icon-edit" title="Edit"> Edit</i></span>
+                                                        <span class="action-delete badge badge-pill badge-danger" style="cursor: pointer;" data-href="{{ route('documents.destroy', [$value->id]) }}"><i class="feather icon-trash" title="Delete"> Delete</i></span>
+                                                    @endif
                                                 </td>
                                             </tr>
                                         @endforeach

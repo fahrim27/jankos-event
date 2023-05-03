@@ -26,13 +26,13 @@
             @endif
             @if (auth()->user()->hasRole('Admin') || auth()->user()->hasRole('Super Admin'))
             
-            <li class=" nav-item {{ request()->is('sliders') ? 'active' : '' }}"><a href="{{ route('sliders.index') }}"><i class="feather icon-image"></i><span class="menu-title" data-i18n="User">Slider</span></a>
+            {{-- <li class=" nav-item {{ request()->is('sliders') ? 'active' : '' }}"><a href="{{ route('sliders.index') }}"><i class="feather icon-image"></i><span class="menu-title" data-i18n="User">Slider</span></a>
             </li>
             <li class=" nav-item {{ request()->is('video') ? 'active' : '' }}"><a href="{{ route('video.index') }}"><i class="feather icon-video"></i><span class="menu-title" data-i18n="User">Video</span></a>
-            </li>
+            </li> --}}
             @endif
 
-            @if (auth()->user()->hasRole('Teacher'))
+            @if (auth()->user()->hasRole('Teacher') || auth()->user()->hasRole('Admin') || auth()->user()->hasRole('Super Admin'))
                 <li class=" navigation-header"><span>EVENT</span>
                 </li>
                 <li class=" nav-item {{ request()->is('teams') ? 'active' : '' }}"><a href="{{ route('teams.index') }}"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Team</span></a>

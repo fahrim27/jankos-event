@@ -9,10 +9,6 @@
         </div>
         <div class="modal-body">
             <div class="form-group">
-                {!! Form::label('for', 'Kategori') !!}
-                {!! Form::select('for', $for, null, ['placeholder' => 'Pilih', 'class' => 'form-control select2', 'required']) !!}
-            </div>
-            <div class="form-group">
                 {!! Form::label('title', 'Judul') !!}
                 {!! Form::text('title', null, ['class' => 'form-control', 'required', 'placeholder' => '', 'oninvalid' => "this.setCustomValidity('Mohon diisi dengan lengkap')", 'oninput' => "this.setCustomValidity('')"]) !!}
             </div>

@@ -15,12 +15,7 @@ class GuideController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->hasAnyRole('Super Admin|Admin'))
         $data = Guide::all();
-        else if (auth()->user()->hasRole('HRD'))
-        $data = Guide::where('for', 'HRD')->get();
-        else
-        $data = Guide::where('for', 'Jobseeker')->get();
         
         return view('guide.index', compact('data'));
     }
@@ -31,13 +26,13 @@ class GuideController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        $for = [
-            'HRD' => 'Employer/Perusahaan',
-            'Jobseeker' => 'Jobseeker/Pelamar',
-        ];
+    {   
+        if (Guide::count() == 1) {
+            flash('Hanya Dapat Menambahkan Satu Panduan')->warning();
+            return redirect()->route('guides.index');
+        }
 
-        return view('guide.create', compact('for'));
+        return view('guide.create');
     }
 
     /**
@@ -49,11 +44,12 @@ class GuideController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+        $input['for'] = 'Peserta';
 
         if ($request->hasFile('file')) {
             $input['file'] = time().'.'.request()->file->getClientOriginalExtension();
             
-            request()->file->storeAs('public/uploads-1/uploads-2/uploads/', $input['file']);
+            request()->file->storeAs('public/uploads/', $input['file']);
         }
         
         Guide::create($input);
@@ -82,13 +78,8 @@ class GuideController extends Controller
      */
     public function edit($id)
     {
-        $for = [
-            'HRD' => 'HRD',
-            'Jobseeker' => 'Jobseeker',
-        ];
-
         $data = Guide::find($id);
-        return view('guide.edit', compact('data', 'for'));
+        return view('guide.edit', compact('data'));
     }
 
     /**
@@ -101,16 +92,17 @@ class GuideController extends Controller
     public function update(Request $request, $id)
     {
         $input = $request->all();
+        $input['for'] = 'Peserta';
 
         if ($request->hasFile('file')) {
             $input['file'] = time().'.'.request()->file->getClientOriginalExtension();
             
-            request()->file->storeAs('public/uploads-1/uploads-2/uploads/', $input['file']);
+            request()->file->storeAs('public/uploads/', $input['file']);
         }
         
         Guide::find($id)->update($input);
 
-        flash('Berhasil mengedit paket layanan')->success();
+        flash('Berhasil mengedit Panduan')->success();
 
         return redirect()->route('guides.index');
     }
@@ -128,12 +120,12 @@ class GuideController extends Controller
 
             return response()->json([
                 'status' => true,
-                'message' => 'Berhasil menghapus paket layanan'
+                'message' => 'Berhasil menghapus Panduan'
             ]);
         } catch(\Exception $e) {
             return response()->json([
                 'status' => false,
-                'message' => 'Gagal menghapus paket layanan'
+                'message' => 'Gagal menghapus Panduan'
             ]);
         }
     }
