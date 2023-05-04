@@ -185,6 +185,11 @@ Route::group(['middleware' => ['auth','verified']], function () {
     Route::resource('logbooks', 'LogbookController');
     Route::resource('members', 'MemberController');
 
+    Route::resource('all-teams', 'AllTeamController');
+    Route::get('/all-teams/documents/{id}', 'AllTeamController@showDocument')->name('all-teams.documents');
+    Route::get('/all-teams/logbooks/{id}', 'AllTeamController@showLogbook')->name('all-teams.logbooks');
+    Route::get('/all-teams/members/{id}', 'AllTeamController@showMember')->name('all-teams.members');
+
     //Route::get('mitra', 'CompanyController@detail_perusahaan')->name('mitra.list');
 
     // Route::resource('users', 'UserController');

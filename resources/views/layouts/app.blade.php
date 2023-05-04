@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="PIXINVENT">
+    <meta name="author" content="">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>UVCF | Unesa Virtual Career Fair</title>
+    <title>Jankos Event</title>
     <link rel="apple-touch-icon" href="{{ asset('app-assets/images/ico/apple-icon-120.png') }}">
-    <link rel="icon" type="image/png" href="https://careerfair.unesa.ac.id/public/assets/LogoUVCF22.png"/>
+    <link rel="icon" type="image/png" href=""/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->

@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center" style="height: 700px;">
-            <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="col-lg-10 col-xl-10 mx-auto">
                 <div class="card card-signin flex-row" style="border-radius: 10px; border: 0">
                     <div class="card-img-left d-none d-md-flex">
                         <!-- Background image for card set in CSS! -->
@@ -48,7 +48,7 @@
                             <div class="mb-4">
                                 <a href="{{ route('password.request') }}" class=""><b>Lupa Password ?</b></a>
                             </div>
-                            <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Masuk</button>
+                            <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Masuk</button>
                             <div class="row col-12 mt-4 justify-content-center">
                                 <h6>Belum punya akun ? <a href="{{route('register')}}">Daftar</a></h6>
                             </div>

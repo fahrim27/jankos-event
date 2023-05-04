@@ -4,8 +4,8 @@
 }
 
 body {
-    background: #007f5f;
-    background: linear-gradient(to right, #52b69a, #99d98c);
+    background: #f065e9;
+    background: linear-gradient(to right, #f2aeee, #edcceb);
 }
 
 .card-signin {
@@ -22,9 +22,9 @@ body {
 }
 
 .card-signin .card-img-left {
-    width: 45%;
+    width: 50%;
     /* Link to your background image using in the property below! */
-    background: scroll center url('../images/1.jpg');
+    background: scroll center url('../images/manual-book-01.jpg');
     background-size: cover;
 }
 

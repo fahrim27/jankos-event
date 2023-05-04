@@ -2,7 +2,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('app-assets/images/logo/unesa.png') }}" alt="" width="35" height="35">
+                    <img src="#" alt="" width="35" height="35">
                     <h2 class="brand-text mb-0">Jankos Event</h2>
                 </a></li>
             <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
@@ -25,7 +25,8 @@
             </li>
             @endif
             @if (auth()->user()->hasRole('Admin') || auth()->user()->hasRole('Super Admin'))
-            
+            <li class=" nav-item {{ request()->is('all-teams') ? 'active' : '' }}"><a href="{{ route('all-teams.index') }}"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Team</span></a>
+            </li>
             {{-- <li class=" nav-item {{ request()->is('sliders') ? 'active' : '' }}"><a href="{{ route('sliders.index') }}"><i class="feather icon-image"></i><span class="menu-title" data-i18n="User">Slider</span></a>
             </li>
             <li class=" nav-item {{ request()->is('video') ? 'active' : '' }}"><a href="{{ route('video.index') }}"><i class="feather icon-video"></i><span class="menu-title" data-i18n="User">Video</span></a>
@@ -35,7 +36,7 @@
             @if (auth()->user()->hasRole('Teacher') || auth()->user()->hasRole('Admin') || auth()->user()->hasRole('Super Admin'))
                 <li class=" navigation-header"><span>EVENT</span>
                 </li>
-                <li class=" nav-item {{ request()->is('teams') ? 'active' : '' }}"><a href="{{ route('teams.index') }}"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Team</span></a>
+                <li class=" nav-item {{ request()->is('teams') ? 'active' : '' }}"><a href="{{ route('teams.index') }}"><i class="feather icon-users"></i><span class="menu-title" data-i18n="User">Team Person</span></a>
                 <li class=" nav-item {{ request()->is('documents') ? 'active' : '' }}"><a href="{{ route('documents.index') }}"><i class="feather icon-folder"></i><span class="menu-title" data-i18n="User">Document</span></a>
                 <li class=" nav-item {{ request()->is('logbooks') ? 'active' : '' }}"><a href="{{ route('logbooks.index') }}"><i class="feather icon-book"></i><span class="menu-title" data-i18n="User">Logbook</span></a>
                 <li class=" nav-item {{ request()->is('members') ? 'active' : '' }}"><a href="{{ route('logbooks.index') }}"><i class="feather icon-user-check"></i><span class="menu-title" data-i18n="User">Member</span></a>

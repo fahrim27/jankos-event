@@ -65,7 +65,7 @@
     </div>
     <!-- /Edit With Your Name -->
     <!-- Edit With Your Job -->
-    <p class="loader-job" id="loader-job">Tanggal Penyelenggaraan Jankos Event</p>
+    <p class="loader-job" id="loader-job">4 - 6 Juni 2023</p>
     <!-- /Edit With Your Job -->
   </div>   
 </div>
@@ -86,7 +86,7 @@
 	      <ul class="hd-list-menu">
 	        <li class="active"><a href="#main-carousel">Intro</a></li>
 	        <li><a href="#section-event-infos">About </a></li>
-	        <li><a target="_blank" href="{{ Storage::url('uploads/'.$guide->file) }}">Manual Book</a></li>
+	        <li><a target="_blank" href="https://drive.google.com/file/d/11d4rXOomx4fbR9duSg8PQCL_1eFNqm3l/view?usp=sharing">Manual Book</a></li>
 	        <li><a href="{{route('register')}}">Register</a></li>
 	        <li><a href="{{route('login')}}">Login</a></li>
 	      </ul> 
@@ -190,7 +190,7 @@
 								<div class="col-md-10 col-md-offset-1">
 									<img src="img/globe.png" alt="">
 									<h1 class="intro-title1">The largest global<br/> Marketing Event</h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu neque nulla. In vitae mollis neque. Sed scelerisque mollis metus. In dolor lectus, tincidunt congue porttitor vitae, consequat in eros. Phasellus dapibus eget libero et lobortis. Pellentesque tempus elit sed ultrices fringilla. Quisque feugiat eros lorem, vel egestas eros ultricies a.</p>
+									<p>JANKOS MARKETING TALENT COMPETITION adalah sebuah ajang pencarian bakat dalam hal kegiatan pemasaran. Kegiatan pemasaran yang dilombakan mencakup pemasaran online dengan dukungan teknologi multimedia dan informatika, serta metode pemasaran offline/konvensional yang mengedepankan kemampuan deskriptif dan persuasif secara langsung kepada pelanggan, dengan melibatkan kerja sama tim yang solid untuk mencapai target pemasaran yang diharapkan.</p>
 									<!-- Buttons -->
 									<div class="ic-buttons">
 										<a href="{{route('register')}}" class="fancybox btn"><i class="fa fa-paper-plane"></i> &nbsp; register now</a> 
@@ -227,14 +227,14 @@
 					<div class="event-info-col">
 						<div class="event-info-ico"><span class="fa fa-location-arrow"></span></div>
 						<h3 class="main-title3">Location:</h3>
-						<p>Cemengkalang, Sidoarjo, Jawa Timur</p>
+						<p>Jl. Pahlawan No.4, Jati, Kabupaten Sidoarjo</p>
 					</div>
 					<!-- /Time -->
 					<!-- Time -->
 					<div class="event-info-col">
 						<div class="event-info-ico"><span class="fa fa-ticket"></span></div>
 						<h3 class="main-title3">Main Contest</h3>
-						<p><strong>Presenter - Videografi = Marketing</strong></p>
+						<p><strong>Presenter - Videografi - Marketing</strong></p>
 					</div>
 					<!-- /Time -->
 					<!-- Time -->
@@ -259,7 +259,7 @@
 					<!-- Left Column -->
 					<div class="about-picture-wrapper">
 						<div class="about-picture" id="about-picture">
-							<img src="{{asset('eventer-landing/img/conference-about.jpg')}}" alt="" class="responsive-image">
+							<img src="{{asset('images/manual-book-01.jpg')}}" alt="" class="responsive-image">
 						</div>
 					</div>				
 					<!-- /Left Column -->
@@ -268,7 +268,8 @@
 						<div class="about-text" id="about-text">
 							<h1 class="title3 title-border"><i class="fa fa-dot-circle-o"></i> About the contest</h1>
 							<div class="about-text-content">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales varius sagittis. Proin a arcu vitae turpis congue facilisis. Quisque a lectus pretium, sagittis augue in, fringilla risus. Quisque elementum, ante a maximus commodo, dui metus imperdiet mi, sit amet tempor lectus erat ac orci. Mauris suscipit rhoncus lobortis. Quisque tincidunt nisi libero. Fusce nec turpis quis enim finibus porta. Donec eget sapien ac leo tempor elementum a at ante.</p>
+								<p style="font-size: 17px;">JANKOS MARKETING TALENT COMPETITION adalah sebuah ajang pencarian bakat dalam hal kegiatan pemasaran. Kegiatan pemasaran yang dilombakan mencakup pemasaran online dengan dukungan teknologi multimedia dan informatika, serta metode pemasaran offline/konvensional yang mengedepankan kemampuan deskriptif dan persuasif secara langsung kepada pelanggan, dengan melibatkan kerja sama tim yang solid untuk mencapai target pemasaran yang diharapkan.</p> <br>
+								<p style="font-size: 17px;">Ajang pencarian bakat ini bertujuan untuk memberikan pengalaman pelatihan langsung bagi siswa-siswa SMK, sehingga mereka dapat merasakan bagaimana bekerja di dunia nyata setelah lulus sekolah. Selain itu, ajang ini juga memberikan kesempatan bagi siswa untuk menguji dan memperkuat kompetensi mereka dalam mengaplikasikan pengetahuan yang telah diperoleh di sekolah, dan menerapkannya dalam berbisnis di dunia usaha yang sesungguhnya. Jadi, bagi siswa yang berpartisipasi dalam ajang ini, mereka akan mendapatkan banyak manfaat berupa pengalaman dan pengetahuan yang berguna untuk masa depan mereka.</p>
 							</div>							
 						</div>
 					</div>
@@ -286,7 +287,7 @@
 				<!-- Section title -->
 				<div class="section-title-wrapper">
 					<h2 class="title-section">Proudly sponsored by</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias esse cumque quae, perferendis neque voluptate recusandae, rem soluta quam error reiciendis consequuntur. Officia delectus quidem blanditiis eum incidunt temporibus nobis</p>
+					<p>ANKOS MARKETING TALENT COMPETITION adalah sebuah ajang pencarian bakat dalam hal kegiatan pemasaran. Kegiatan pemasaran yang dilombakan mencakup pemasaran online dengan dukungan teknologi multimedia dan informatika, serta metode pemasaran offline/konvensional yang mengedepankan kemampuan deskriptif dan persuasif secara langsung kepada pelanggan, dengan melibatkan kerja sama tim yang solid untuk mencapai target pemasaran yang diharapkan.</p>
 				</div>
 				<!-- /Section title -->
 				
@@ -334,7 +335,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="map" id="map">			
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3026.6617384330816!2d-73.9992296355825!3d40.65938630000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25ae9ec6e2cb3%3A0x39c56782050e447a!2s27th+St%2C+Brooklyn%2C+NY+11232%2C+USA!5e0!3m2!1spt-BR!2sbr!4v1431959746282" height="350"></iframe>
+					<iframe src="https://www.google.com/maps/embed/v1/place?q=Dinas+Pendidikan+dan+Kebudayaan+Kabupaten+Sidoarjo,+Jalan+Pahlawan,+Jati,+Sidoarjo+Regency,+East+Java,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" height="400"></iframe>
 				</div>
 			</div>			
 		</div>
